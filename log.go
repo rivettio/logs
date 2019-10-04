@@ -1,4 +1,4 @@
-package logs
+package main
 
 import (
 	"bytes"
@@ -9,7 +9,6 @@ import (
 	"strings"
 	"sync"
 	"time"
-
 )
 
 const (
@@ -359,9 +358,6 @@ func (l *Logger) Panic(v ...interface{}) {
 	panic(s)
 }
 
-
-
-
 func (l *Logger) Panicf(format string, v ...interface{}) {
 	s := fmt.Sprintf(format, v...)
 	l.Output(PANIC, s)
@@ -626,9 +622,3 @@ func Stack(v ...interface{}) {
 		console.Output(ERROR, s)
 	}
 }
-
-
-
-
-
-
