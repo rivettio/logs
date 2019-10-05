@@ -611,6 +611,7 @@ func Stack(v ...interface{}) {
 	n := runtime.Stack(buf, true)
 	s += string(buf[:n])
 	s += "\n"
+	
 
 	std.Output(ERROR, s)
 
@@ -618,3 +619,4 @@ func Stack(v ...interface{}) {
 		console.Output(ERROR, s)
 	}
 }
+
