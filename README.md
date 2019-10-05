@@ -14,7 +14,6 @@ demo:
 package main
 
 import (
-	"fmt"
 	"github.com/rivettio/logs"
 )
 
@@ -25,10 +24,11 @@ func main() {
 func init() {
 	err := logs.Init("./", "file_log", logs.DEBUG, true, true, true)
 	if err != nil {
-		fmt.Println("logs init error : ", err)
-	} else {
-		fmt.Println("logs init success")
+		logs.Errorf("logs init error: %#v", err)
+		return
 	}
+
+	logs.Info("logs init success")
 }
 
 ```
