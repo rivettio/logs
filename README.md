@@ -8,7 +8,6 @@ Log Printing and Recording Tool.
 
 ### Usage
 
-demo:
 
 ```go
 package main
