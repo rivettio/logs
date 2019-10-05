@@ -612,7 +612,6 @@ func Stack(v ...interface{}) {
 	s += string(buf[:n])
 	s += "\n"
 	
-
 	std.Output(ERROR, s)
 
 	if std.isConsole {
