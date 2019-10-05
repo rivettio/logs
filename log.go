@@ -103,17 +103,13 @@ func Init(logPath string, logFile string, level int, isConsole bool, showFileLin
 		isConsole:    isConsole,
 		showFileLine: showFileLine,
 	}
-
 	std.mu.enable = mutex
-
 	file, err := os.OpenFile(std.logfileFullName(), os.O_RDWR|os.O_APPEND|os.O_CREATE, 0666)
 	if err != nil {
 		console.Error(err)
 		return err
 	}
-
 	std.out = file
-
 	return nil
 }
 
