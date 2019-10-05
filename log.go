@@ -109,7 +109,9 @@ func Init(logPath string, logFile string, level int, isConsole bool, showFileLin
 		console.Error(err)
 		return err
 	}
+	
 	std.out = file
+
 	return nil
 }
 
