@@ -592,13 +592,10 @@ func Panicln(v ...interface{}) {
 	}
 
 	s := fmt.Sprintln(v...)
-
 	std.Output(PANIC, s)
-
 	if std.isConsole {
 		console.Output(PANIC, s)
 	}
-
 	panic(s)
 }
 
@@ -615,7 +612,6 @@ func Stack(v ...interface{}) {
 	s += "\n"
 	
 	std.Output(ERROR, s)
-
 	if std.isConsole {
 		console.Output(ERROR, s)
 	}
